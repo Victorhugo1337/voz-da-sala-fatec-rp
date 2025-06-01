@@ -95,7 +95,7 @@ main {
 }
 
 .logo-destaque {
-  max-width: 450px;
+  max-width: 600px;
   width: 100%;
   filter: drop-shadow(0 0 6px #e100ff);
   user-select: none;
@@ -112,8 +112,8 @@ main {
 }
 
 .quem-somos img.embaixadores-img {
-  flex: 1 1 400px;
-  max-width: 600px;
+  flex: 1 1 600px;
+  max-width: 700px;
   border-radius: 10px;
   box-shadow: 0 0 20px #e100ff88;
   object-fit: cover;
