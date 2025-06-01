@@ -2,42 +2,138 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voz da Sala</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap"
+      rel="stylesheet"
     />
     <script
       src="https://kit.fontawesome.com/8090eeeaa7.js"
       crossorigin="anonymous"
     ></script>
-    />
-    <link
-      rel="shortcut icon"
-      href="img/podcast-neon-claro.png"
-      image="/x-icon"
-    />
-    <title>Voz da Sala</title>
   </head>
   <body>
     <header id="inicio">
-      <div class="overlay"></div>
       <nav class="menu">
-        <ul>
-          <li><a href="#inicio">Quem somos</a></li>
-          <li><a href="#história">Nossa história</a></li>
-          <li><a href="#participe">Partcipe</a></li>
+        <ul class="menu-links">
+          <li><a href="index.html">Quem somos</a></li>
+          <li><a href="historia.html">Nossa história</a></li>
+          <li><a href="missao.html">Missão</a></li>
         </ul>
-        <img
-          class="logo"
-          src="img/podcast-neon-claro.png"
-          alt="logo
-      podcast"
-        />
+        <img class="logo" src="img/podcast-neon-claro.png" alt="logo podcast" />
+        <ul class="menu-icones">
+          <li>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://spotify.com" target="_blank" aria-label="Spotify">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
+
+    <main>
+      <!-- Adiciona a imagem do logo como destaque antes da seção Quem Somos -->
+      <section class="logo-section">
+        <img
+          src="img/podcast-neon-claro.png"
+          alt="Logo Voz da Sala"
+          class="logo-destaque"
+        />
+      </section>
+
+      <section class="quem-somos">
+        <img
+          src="img/embaixadores.jpg"
+          alt="Embaixadores do podcast"
+          class="embaixadores-img"
+        />
+        <article>
+          <h1>Quem Somos: Um Projeto Criado por Alunos para Alunos</h1>
+          <p>
+            <strong>Comunidade Estudantil:</strong> Somos estudantes
+            universitários que entenderam a importância de criar pontes entre
+            colegas. Nossa origem está na própria vivência acadêmica.
+          </p>
+          <p>
+            <strong>Iniciativa Independente:</strong> Nascemos da necessidade
+            real de ter espaços genuínos para expressão, sem burocracias ou
+            hierarquias que inibam a comunicação autêntica.
+          </p>
+          <p>
+            <strong>Propósito Colaborativo:</strong> Acreditamos que cada aluno
+            tem uma história valiosa. Nosso papel é facilitar conexões e
+            amplificar vozes que merecem ser ouvidas.
+          </p>
+          <p>
+            <strong>Movimento Orgânico:</strong> O que começou como conversas
+            informais evoluiu para uma rede de apoio mútuo que cresce
+            naturalmente pela identificação entre pares.
+          </p>
+        </article>
+      </section>
+
+      <section class="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos-scroll">
+          <div class="depoimento-item">
+            <p>
+              <strong>Prof. Ana Beatriz - Coordenadora Pedagógica</strong><br />
+              "O Voz da Sala transformou a dinâmica do nosso campus. Vejo
+              estudantes mais engajados, confiantes e conectados uns com os
+              outros. É um projeto que deveria ser replicado em todas as
+              universidades."
+            </p>
+          </div>
+          <div class="depoimento-item">
+            <p>
+              <strong>Carlos, 4º semestre - Engenharia</strong><br />
+              "Encontrei aqui o espaço que não sabia que precisava. Compartilhei
+              minha luta com ansiedade e descobri que muitos colegas passavam
+              pelo mesmo. Hoje temos um grupo de apoio que se fortalece a cada
+              encontro."
+            </p>
+          </div>
+          <div class="depoimento-item">
+            <p>
+              <strong>Letícia, 2º semestre - Psicologia</strong><br />
+              "Como caloura, me sentia perdida. O Voz da Sala me conectou com
+              veteranos que se tornaram mentores e amigos. Aprendi que fazer
+              perguntas não é sinal de fraqueza, mas de coragem."
+            </p>
+          </div>
+          <div class="depoimento-item">
+            <p>
+              <strong>Dr. Roberto - Vice-Reitor</strong><br />
+              "Este projeto exemplifica o que esperamos da nossa comunidade
+              acadêmica: iniciativa estudantil, colaboração e impacto social. O
+              Voz da Sala recebeu nossa menção de excelência em inovação
+              educacional."
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="down-menu">
+      <p class="degrade">&copy; Podcast Voz da Sala 2025</p>
+    </footer>
   </body>
-  <footer></footer>
 </html>

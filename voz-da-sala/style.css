@@ -1,73 +1,198 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.roboto-regular {
+/* Fontes */
+body {
+  background-color: #000;
+  color: #eee;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal;
-}
-.menu {
-  background-color: #000;
-  padding: 10px 20px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #e100ff;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#inicio {
-  background-image: url("img/podcast-neon-claro.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 720px;
-  color: white;
-  position: relative;
-  background-color: #000;
-}
-
+/* Navbar */
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 60px;
   background: #000;
-  padding: 15px 30px;
+  padding: 12px 30px;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e100ff;
+  z-index: 1000;
+}
+
+.menu-links,
+.menu-icones {
+  display: flex;
+  list-style: none;
+  gap: 25px;
   align-items: center;
 }
 
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
+.menu-links a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.menu-links a:hover,
+.menu-links a:focus {
+  background: #e100ff;
+  color: #111;
+  outline: none;
+}
+
+/* Logo */
 .logo {
-  height: 60px;
-  margin-left: auto;
+  height: 80px;
+  user-select: none;
 }
 
-.menu a {
-  background-image: linear-gradient(to right, #e100ff, #73317a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
+/* Ícones sociais */
+.menu-icones a {
+  color: #eee;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-body {
+.menu-icones a:hover,
+.menu-icones a:focus {
+  color: #e100ff;
+  outline: none;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 90px auto 40px;
+  padding: 0 20px;
+}
+
+/* Logo destaque no main */
+.logo-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.logo-destaque {
+  max-width: 450px;
+  width: 100%;
+  filter: drop-shadow(0 0 6px #e100ff);
+  user-select: none;
+  cursor: default;
+}
+
+/* Quem Somos */
+.quem-somos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.quem-somos img.embaixadores-img {
+  flex: 1 1 400px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #e100ff88;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.quem-somos img.embaixadores-img:hover {
+  transform: scale(1.03);
+}
+
+.quem-somos article {
+  flex: 2 1 500px;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.quem-somos article strong {
+  color: #e100ff;
+}
+
+/* Depoimentos */
+.depoimentos {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 2px solid #e100ff;
+  border-bottom: 2px solid #e100ff;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.depoimentos h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+/* Contêiner de rolagem horizontal */
+.depoimentos-scroll {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-left: 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Remove scrollbar visual (opcional) */
+.depoimentos-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.depoimentos-scroll::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 3px;
+}
+.depoimentos-scroll::-webkit-scrollbar-thumb {
+  background: #e100ff;
+  border-radius: 3px;
+}
+
+/* Itens do depoimento lado a lado */
+.depoimento-item {
+  min-width: 280px;
+  padding: 15px 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #ddd;
+  background: rgba(225, 0, 255, 0.15);
+  border-radius: ;
+}
+
+footer.down-menu p.degrade {
+  text-align: center;
+  color: #e100ff;
+  font-weight: 700;
+  padding: 15px 0;
+  user-select: none;
 }
