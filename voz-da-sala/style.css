@@ -445,3 +445,7 @@ footer.down-menu p.degrade {
     display: block;
   }
 }
+
+.menu-icones.open{
+  display: flex !important;
+}
