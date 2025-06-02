@@ -221,14 +221,13 @@ footer.down-menu p.degrade {
   user-select: none;
 }
 
-/* Produtos - container geral */
 .produtos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0 2rem 0;
-  background-color: transparent; /* remove fundo escuro para acompanhar fundo da página */
+  background-color: transparent;
 }
 
 /* Centraliza o título da seção produtos */
@@ -241,7 +240,7 @@ footer.down-menu p.degrade {
 
 /* Grid dos produtos */
 .product-grid {
-  margin-top: 60px; /* espaço maior em cima dos cards */
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -249,14 +248,13 @@ footer.down-menu p.degrade {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background-color: transparent; /* remove fundo escuro */
+  background-color: transparent;
 }
 
-/* Cards dos produtos */
 .card {
-  background-color: #121212; /* Preto bem escuro, para destacar do fundo */
+  background-color: #121212;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(225, 0, 255, 0.5); /* sombra roxa translúcida */
+  box-shadow: 0 4px 15px rgba(225, 0, 255, 0.5);
   width: 280px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -310,16 +308,12 @@ footer.down-menu p.degrade {
   background-color: #5936a4;
 }
 
-/* Centraliza o card da segunda linha */
 .centralizado {
   flex: 1 1 100%;
   display: flex;
   justify-content: center;
 }
 
-/* RESPONSIVIDADE */
-
-/* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
   main {
     margin: 80px 10px 40px;
@@ -327,7 +321,7 @@ footer.down-menu p.degrade {
   }
 
   .card {
-    width: 90vw; /* ocupa quase toda a largura da tela */
+    width: 90vw;
   }
 
   .product-grid {
@@ -350,7 +344,6 @@ footer.down-menu p.degrade {
   }
 }
 
-/* Tablets (481px a 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   main {
     margin: 85px 20px 40px;
@@ -380,7 +373,6 @@ footer.down-menu p.degrade {
   }
 }
 
-/* Laptops e desktops médios (769px a 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   main {
     margin: 90px auto 40px;
@@ -396,7 +388,6 @@ footer.down-menu p.degrade {
   }
 }
 
-/* Grandes telas (maiores que 1024px) */
 @media (min-width: 1025px) {
   main {
     max-width: 900px;
@@ -410,6 +401,7 @@ footer.down-menu p.degrade {
     gap: 3rem;
   }
 }
+
 #hamburger {
   display: none;
   background: none;
@@ -422,30 +414,72 @@ footer.down-menu p.degrade {
 }
 
 @media (max-width: 768px) {
+  .logo {
+    margin-right: 50px;
+  }
+
+  #hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 1200;
+    background: none;
+    border: none;
+    color: #e100ff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    user-select: none;
+  }
+
   .menu-icones {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px; /* abaixo da navbar */
-    right: 30px;
+    position: fixed;
+    top: 50px;
+    right: 0;
     background-color: #000;
     border: 2px solid #e100ff;
-    border-radius: 8px;
-    padding: 10px;
-    gap: 15px;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 0;
+    gap: 10px;
     z-index: 1100;
-    width: 150px;
+    width: 50px; /* largura mínima para ícones */
+    box-shadow: 2px 0 6px rgba(225, 0, 255, 0.6);
   }
 
   .menu-icones.open {
     display: flex;
   }
 
-  #hamburger {
+  .menu-icones li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-icones a {
     display: block;
+    padding: 8px 0;
+    font-size: 1.6rem;
   }
 }
 
-.menu-icones.open{
-  display: flex !important;
+@media (min-width: 769px) {
+  .menu-icones {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+#hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
 }
