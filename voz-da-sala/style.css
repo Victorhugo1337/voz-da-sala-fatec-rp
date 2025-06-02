@@ -86,6 +86,7 @@ main {
   max-width: 900px;
   margin: 90px auto 40px;
   padding: 0 20px;
+  padding-top: 80px;
 }
 
 /* Logo destaque no main */
@@ -102,37 +103,60 @@ main {
   cursor: default;
 }
 
-/* Quem Somos */
 .quem-somos {
+  max-width: 800px;
+  margin: 90px auto 40px;
+  padding: 0 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: flex-start;
-  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 30px;
 }
 
-.quem-somos img.embaixadores-img {
-  flex: 1 1 600px;
+.embaixadores-img {
   max-width: 700px;
+  width: 100%;
   border-radius: 10px;
-  box-shadow: 0 0 20px #e100ff88;
+  box-shadow: 0 0 25px #e100ffaa;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 
-.quem-somos img.embaixadores-img:hover {
+.embaixadores-img:hover {
   transform: scale(1.03);
+}
+
+body:not(.pagina-inicial) .embaixadores-img {
+  display: none;
 }
 
 .quem-somos article {
   flex: 2 1 500px;
   color: #ddd;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.quem-somos article p {
+  margin-bottom: 1.8rem;
 }
 
 .quem-somos article strong {
   color: #e100ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+}
+
+.quem-somos article strong i {
+  color: #e100ff;
+  font-size: 1.5rem;
+  margin-right: 6px;
 }
 
 /* Depoimentos */
@@ -186,7 +210,7 @@ main {
   line-height: 1.3;
   color: #ddd;
   background: rgba(225, 0, 255, 0.15);
-  border-radius: ;
+  border-radius: 6px;
 }
 
 footer.down-menu p.degrade {
@@ -195,4 +219,229 @@ footer.down-menu p.degrade {
   font-weight: 700;
   padding: 15px 0;
   user-select: none;
+}
+
+/* Produtos - container geral */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0 2rem 0;
+  background-color: transparent; /* remove fundo escuro para acompanhar fundo da página */
+}
+
+/* Centraliza o título da seção produtos */
+.produtos h1.titulo {
+  text-align: center;
+  color: #e100ff;
+  margin-bottom: 1.5rem;
+  user-select: none;
+}
+
+/* Grid dos produtos */
+.product-grid {
+  margin-top: 60px; /* espaço maior em cima dos cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent; /* remove fundo escuro */
+}
+
+/* Cards dos produtos */
+.card {
+  background-color: #121212; /* Preto bem escuro, para destacar do fundo */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(225, 0, 255, 0.5); /* sombra roxa translúcida */
+  width: 280px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #eee;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(225, 0, 255, 0.8); /* sombra mais forte no hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-body h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #e100ff; /* título roxo */
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.card-body button {
+  padding: 0.5rem 1.2rem;
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-height: 40px; /* altura fixa para padronizar botões */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.card-body button:hover {
+  background-color: #5936a4;
+}
+
+/* Centraliza o card da segunda linha */
+.centralizado {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* RESPONSIVIDADE */
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  main {
+    margin: 80px 10px 40px;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 90vw; /* ocupa quase toda a largura da tela */
+  }
+
+  .product-grid {
+    gap: 1.5rem;
+    margin-top: 40px;
+  }
+
+  .menu-links,
+  .menu-icones {
+    gap: 15px;
+  }
+
+  .menu-links a {
+    font-size: 1rem;
+    padding: 5px 6px;
+  }
+
+  .menu-icones a {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    margin: 85px 20px 40px;
+    max-width: 90%;
+  }
+
+  .card {
+    width: 45vw;
+    max-width: 320px;
+  }
+
+  .product-grid {
+    gap: 2rem;
+  }
+
+  .menu-links,
+  .menu-icones {
+    gap: 20px;
+  }
+
+  .menu-links a {
+    font-size: 1.05rem;
+  }
+
+  .menu-icones a {
+    font-size: 1.4rem;
+  }
+}
+
+/* Laptops e desktops médios (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    margin: 90px auto 40px;
+    max-width: 900px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .product-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* Grandes telas (maiores que 1024px) */
+@media (min-width: 1025px) {
+  main {
+    max-width: 900px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .product-grid {
+    gap: 3rem;
+  }
+}
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #e100ff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .menu-icones {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* abaixo da navbar */
+    right: 30px;
+    background-color: #000;
+    border: 2px solid #e100ff;
+    border-radius: 8px;
+    padding: 10px;
+    gap: 15px;
+    z-index: 1100;
+    width: 150px;
+  }
+
+  .menu-icones.open {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
 }
