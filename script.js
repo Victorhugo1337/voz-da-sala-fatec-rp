@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger")
-  const menuIcones = document.querySelector(".menu-icones")
+  const menuLinks = document.querySelector(".menu-links")
 
   hamburger.addEventListener("click", () => {
-    menuIcones.classList.toggle("open")
+    menuLinks.classList.toggle("open")
   })
+
   document.addEventListener("click", (event) => {
     if (
       !hamburger.contains(event.target) &&
-      !menuIcones.contains(event.target)
+      !menuLinks.contains(event.target)
     ) {
-      menuIcones.classList.remove("open")
+      menuLinks.classList.remove("open")
     }
   })
 })
